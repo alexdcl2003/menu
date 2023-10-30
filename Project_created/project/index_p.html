@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>FOR IU STORE</title>
+    <!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="../project/styless_p.css">
+    <!-- style>
+        
+    </style> -->
+</head>
+
+<body>
+    
+    <section id="inicio">
+        <header>
+            <div class="contenido-header">
+    
+                    <!-- orden de menu -->
+                    <!-- <div class="order"> -->
+    
+                        <div class="logo">
+                            <h1>For iu store</h1>
+                        </div>
+                        
+                    <nav id="nav">
+                        
+                        <ul>
+                            <li>
+                                
+                            </li>
+                            <li>
+                                <a href="#inicio"></a>
+                                <i class="fa-solid fa-house"></i>
+                                <span> <a href="/index.html">Inicio</a></span>
+                            </li>
+                            <li>
+                                <a href="#sabores"></a>
+                                <i class="fa-solid fa-utensils"></i>
+                                <span> <a href="/Project_created/project/index_p.html">Platos</a></span>
+                                
+                                
+                            </li>
+                            <li>
+                                <a href="#Contacto"></a>
+                                <i class="fa-solid fa-comments"></i>
+                                <span><a href="">Informacion</a></span>
+                            </li>
+                            <li>
+                                <div class="social">
+                        <a href="tel:099-140-9927">
+                            <i class="fa-solid fa-phone"></i>
+                            099-140-9927
+                        </a>
+                        <div class="nav-responsive" id="var">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+    
+               
+    
+            </div>
+    
+        </header>
+        </section>
+    
+
+
+
+
+
+    <section>
+
+        <!-- fijo -->
+        <div class="container">
+            <div class="menu">
+                <h1>Menú dolarazo "2 dolare"</h1>
+                <div class="menuprecios">
+                    <ol>
+                        <li>arroz con pollo__________$2</li>
+                        <li>arroz con menestra_______$2</li>
+                        <li>pollito a la brasa_________$2</li>
+                        <li>pollo al jugo____________ $2</li>
+                        <li>Guatita________________ $2</li>
+                        <li>Encebollado____________ $2</li>
+                        <li>Ceviche________________$2</li>
+                    </ol>
+                </div>
+            </div>
+        
+
+         <div class="platos">
+
+            <!-- Pedidos -->
+        <div id="orders">
+            <div class="order-item" data-index="0">
+                <br>
+                <label for="plato">Plato:</label>
+                <select id="plato">
+                    <option value="Arroz con pollo">Arroz con Pollo</option>
+                    <option value="Arroz con Menestra">Arroz con Menestra</option>
+                    <option value="Pollo al jugo">Arroz con pollo al Jugo</option>
+                    <option value="Pollito a la brasa">Pollito a la brasa</option>
+                    <option value="Guatita">Guatita</option>
+                    <option value="Encebollado">Encebollado</option>
+                    <option value="Ceviche">Ceviche</option>
+                </select>
+                <button onclick="agregarPlato(0)">+</button>
+                <span class="cantidad-platos">0</span>
+                <button onclick="quitarPlato(0)">-</button>
+                <button onclick="eliminarPlato(0)">Quitar Plato</button>
+            </div>
+        </div>
+          <!-- Opciones de propina -->
+          <div id="propina-options">
+            <button onclick="agregarPlatoDiferente()">Agregar Plato Diferente</button>
+            <div class="total">
+                <br>
+                <h2>Total sin IVA: $<span id="total-amount">0.00</span></h2>
+            </div>
+            <div class="total">
+                <br>
+                <h2>Total con IVA: $<span id="total-con-iva">0.00</span></h2>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <!-- Opciones de propina -->
+            <div id="propina-options">
+                <button onclick="agregarPropina(10)">10%</button>
+                <button onclick="agregarPropina(15)">15%</button>
+                <button onclick="agregarPropina(20)">20%</button>
+                <button onclick="mostrarInputPersonalizado()">Personalizado</button>
+                <div id="personalizada-container" style="display:none;">
+                    <label for="propina-personalizada">Porcentaje Personalizado (%):</label>
+                    <input type="number" id="propina-personalizada" placeholder="Ingrese el porcentaje">
+                    <button onclick="propinaPersonalizada()">Calcular</button>
+                </div>
+                <div class="total">
+                    <br>
+                    <h2>Propina: $<span id="propina-amount">0.00</span></h2>
+                </div>
+            </div>
+        </div>
+        <!-- Factura -->
+       
+
+        
+        <br>
+        <!-- Botones para elegir tipo de factura -->
+        <div class="container">
+            <label for="">Desea su factura con: </label>
+            <button id="consumidor-final">Consumidor final</button>
+            <button id="datos">Datos</button>
+            <div id="datos-container" class="oculto">
+                <input type="text" id="nombre" placeholder="Nombre del cliente">
+                <input type="text" id="cedula" placeholder="Número de cédula">
+                <button id="completar">Completar</button>
+            </div>
+        </div>
+        <!-- Datos del cliente -->
+        <br>
+        <div id="factura-container" class="container oculto">
+            <h2>Factura</h2>
+            <div id="factura"></div>
+        </div>
+                
+    </div>
+</div>
+
+
+</section>
+
+    <!-- <script>
+        
+    </script> -->
+    <script src="../project/main_p.js"></script>
+</body>
+
+</html>

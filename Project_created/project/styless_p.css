@@ -1,0 +1,128 @@
+/* MENU DE COMPRAS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align:center;
+    padding: 20px;
+    border: 1px solid #050202;
+    border-radius: 10px;
+}
+
+.order-item {margin-bottom: 10px;}
+
+
+.menuprecios{
+    text-align:center;
+}
+h1{text-align: center}
+.platos{text-align: center}
+
+/* .menuprecios ol{text-align:left} */
+.oculto {
+    display: none;
+}
+
+
+body{
+    background-image: url(../img/encebollado.jpg)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MENU PRINCIPAL DE ARRIBA */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+html{
+    /*deslizar en un aopcion*/
+    scroll-behavior: smooth;
+}
+
+/*inicio*/
+#inicio{
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+}
+#inicio header{width: 100%;}
+#inicio header .contenido-header{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        position: relative;
+}
+#inicio header .contenido-header nav{
+    top: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+#inicio header .contenido-header nav ul{
+    display: flex;
+    list-style: none;
+
+}
+#inicio header .contenido-header .logo{
+    color:#a8a8a8;
+}
+#inicio header .contenido-header nav ul li{
+    text-align: center;
+}
+#inicio header .contenido-header nav ul li i{
+    display: block;
+    color: #a8a8a8;
+    margin: 0 20px;
+} 
+#inicio header .contenido-header nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #a8a8a8;
+    margin: 0 20px;
+}
+.nav-responsive{
+    font-size: 25px;
+    color: #a8a8a8;
+    display: none;
+}
+#inicio header .contenido-header nav ul li:hover i{
+    color:rgb(32, 196, 196);
+}
+#inicio header .contenido-header .social a{
+    display: inline-block;
+    background-color:rgb(12, 175, 175);
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
